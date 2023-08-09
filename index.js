@@ -22,16 +22,5 @@ app.get("/about", (req, res) => {
   });
 });
 
-app.get("/test/:verify", (req, res) => {
-  if (req.params.verify === "True") {
-    res.sendFile(templatesPath + "/test/page.html", {
-      root: __dirname,
-    });
-  } else {
-    res.sendStatus(404);
-  }
-  
-});
-
 app.listen(port);
 console.log(`Server in port ${port}`);
